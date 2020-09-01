@@ -1,0 +1,111 @@
+.nondisp {
+    display: none;
+}
+
+/* Topic container */
+ul.Topic-ctner {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(116, 140, 206);
+}
+
+/* Style the topic menu */
+li.Topic {
+    float: left;
+}
+
+li button.Topic-btn {
+    display: inline-block;
+    color: white;
+    background-color: rgb(116, 140, 206);
+    border: none;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+li button.Topic-btn:hover {
+    background-color: rgb(77, 105, 182);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* flex container */
+div.disp-ctner {
+    display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+    flex: 1;
+    background: rgb(176, 195, 230);
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav button.inactive-btn {
+    display: block;
+    color: black;
+    background-color: rgb(176, 195, 230);
+    border: none;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+}
+
+nav button.inactive-btn:hover{
+color: white
+}
+
+nav button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+nav button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+nav button:hover span {
+    padding-right: 25px;
+  }
+  
+nav button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+nav button.active-btn{
+    display: block;
+    color: white;
+    background-color: rgb(176, 195, 230);
+    border: none;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+}
+
+/* Style the content */
+div.disp-ans {
+    flex: 3;
+    background-color: #F7F9F9;
+    padding: 10px;
+    overflow: auto;
+}

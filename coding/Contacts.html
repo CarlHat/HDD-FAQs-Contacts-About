@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contacts</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="ContactsStyle.css">
+    <script src="Contacts.js"></script>
+</head>
+
+<body>
+
+    <h1>Contact Us</h1>
+
+    <p>For frequently asked questions please visit <a href="FAQs.html">FAQs </a></p>
+
+    <div>
+
+        <form target="_blank" action="" onsubmit="return CheckSubmit()">
+
+            <div class="ctner">
+
+                <div class="field">
+                    <label for="firstName">First Name<abbr title="required">*</abbr></label><br>
+                    <input class="input" type="text" name="firstName" id="firstName" oninput="CheckValue('firstName')"
+                        onblur="CheckValue('firstName')">
+                    <div class="nondisp" id="firstName-error">ERROR: Please enter first name</div>
+
+                </div>
+
+                <div class="field">
+
+                    <label for="lastName">Last Name<abbr title="required">*</abbr></label><br>
+                    <input class="input" type="text" name="lastName" id="lastName" oninput="CheckValue('lastName')"
+                        onblur="CheckValue('lastName')">
+                    <div class="nondisp" id="lastName-error">ERROR: Please enter last name</div>
+
+                </div>
+
+            </div>
+
+            <div class="ctner">
+                <div class="field">
+
+                    <label for="email">Email Address<abbr title="required">*</abbr></label><br>
+                    <input type="email" id="email" name="email" placeholder="email@email.com" class="input"
+                        oninput="CheckEmail('email')" onblur="CheckEmail('email')">
+                    <div class="nondisp" id="email-error">ERROR: Please enter a valid email</div>
+
+                </div>
+            </div>
+
+
+            <div class="ctner select-ctner">
+                <div class="field">
+
+                    <label for="reason">Reason for contact<abbr title="required">*</abbr></label><br>
+                    <select id="reason" name="reason" class="input" onchange="CheckReason('reason')" onblur="CheckReason('reason')">
+                        <option value="r0" disabled="disabled" selected="selected">Please select</option>
+                        <option value="r1">r1111111111111111</option>
+                        <option value="r2">r2222222222222222</option>
+                        <option value="r3">r3333333333333333</option>
+                        <option value="r4">r4444444444444444</option>
+                    </select>
+                    <div class="nondisp" id="reason-error">ERROR: Please make a selection</div>
+
+                </div>
+            </div>
+
+            <label for="attachment">Chose an attachment:</label>
+            <input type="file" id="attachment" name="attachment"><br><br>
+
+            <div class="ctner">
+                <div class="field">
+
+                    <label for="question">Additional Details<abbr title="required">*</abbr></label><br>
+                    <textarea name="question" id="question" placeholder="Message" class="input input-text" oninput="CheckValue('question')"
+                    onblur="CheckValue('question')"></textarea>
+                    <div class="nondisp" id="question-error">ERROR: Please enter your message</div>
+
+                </div>
+            </div>
+
+            <input type="submit" value="Submit" class=Submit-btn>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
